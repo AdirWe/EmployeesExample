@@ -51,6 +51,9 @@ const Wrapper = styled.div`
   margin-top: 3rem;
   margin-right: 2rem;
   border-radius: 3px;
+  &:hover {
+    box-shadow: 0 0 10px lightblue;
+  }
 `;
 
 const Img = styled.img`
