@@ -48,14 +48,17 @@ app.get("/filteredUsers", (req, res) => {
   if (status == "All") {
     res.json({
       users: data.users.filter(
-        (user) => search == undefined || user.username.includes(search)
+        (user) =>
+          search == undefined ||
+          user.username.toUpperCase().includes(search.toUpperCase())
       ),
     });
   } else {
     let requiredUsers = data.users.filter(
       (user) =>
         user.status == status &&
-        (search == undefined || user.username.includes(search))
+        (search == undefined ||
+          user.username.toUpperCase().includes(search.toUpperCase()))
     );
     res.json({ users: requiredUsers });
   }
