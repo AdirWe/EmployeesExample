@@ -91,5 +91,6 @@ const EmployeeList = styled.div`
   flex-wrap: wrap;
   /* justify-content: space-between; */
   width: 80%;
+  margin-bottom: 2rem;
   /* padding-top: 3rem; */
 `;
