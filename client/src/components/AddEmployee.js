@@ -44,13 +44,6 @@ const AddEmployee = ({ setIsOpen, addEmployee }) => {
           />
         </Data>
         <FooterButons>
-          <CancelButton
-            onClick={() => {
-              setIsOpen(false);
-            }}
-          >
-            cancel
-          </CancelButton>
           <SendButton
             onClick={() => {
               onSubmit();
@@ -58,6 +51,13 @@ const AddEmployee = ({ setIsOpen, addEmployee }) => {
           >
             Create
           </SendButton>
+          <CancelButton
+            onClick={() => {
+              setIsOpen(false);
+            }}
+          >
+            cancel
+          </CancelButton>
         </FooterButons>
       </Wrapper>
     </Modal>
@@ -118,32 +118,32 @@ const Label = styled.label`
 const FooterButons = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   width: 100%;
+  margin-top: 1rem;
   padding-left: 1rem;
 `;
 
-const SendButton = styled.button`
+const SendButton = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 1rem;
-  color: green;
-  cursor: pointer;
-  font-size: 1rem;
-  background: none;
-  border: none;
-  margin: 0;
-  font: inherit;
+  padding: 0.2rem 1rem;
+  color: #5c5c5c;
   font-weight: bold;
+  cursor: pointer;
+  border-radius: 3px;
+  background: rgb(26, 163, 255);
+  color: white;
 `;
 
 const CancelButton = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 1rem;
+  padding: 0.2rem 1rem;
   color: #5c5c5c;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 3px;
 `;
