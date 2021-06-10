@@ -42,7 +42,7 @@ const Body = () => {
   };
   const begginSearch = () => {
     axios
-      .get("/filteredUsers?status=" + status + "&filter=" + search)
+      .get("/filteredUsers?status=" + status + "&search=" + search)
       .then((res) => {
         setEmployees(res.data.users);
         // setSearch("");

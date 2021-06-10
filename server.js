@@ -42,9 +42,9 @@ app.get("/usersByStatus/:status", (req, res) => {
 });
 
 app.get("/filteredUsers", (req, res) => {
-  console.log(req.query);
+  // console.log(req.query);
   let { search, status } = req.query;
-  console.log("filteredUsers! search = ", search, ". status = ", status);
+  // console.log("filteredUsers! search = ", search, ". status = ", status);
   if (status == "All") {
     res.json({
       users: data.users.filter(
